@@ -40,7 +40,7 @@
                             <?php if ($this->options->langis == '0'): ?>
                                 <?php $this->date('F j, Y'); ?>
                             <?php else: ?>
-                                <?php $this->dateWord(); ?>t
+                                <?php $this->dateWord(); ?>
                             <?php endif; ?>
                         </span>
                         </div>

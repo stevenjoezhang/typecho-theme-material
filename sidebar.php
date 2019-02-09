@@ -2,7 +2,7 @@
 <div class="sidebar-overlay "></div>
 
 <!-- Material sidebar -->
-<aside id="sidebar" class="sidebar sidebar-colored  sidebar-fixed-left" role="navigation">
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
 
     <div id="sidebar-main">
         <!-- Sidebar Header -->
@@ -13,10 +13,6 @@
                 <?php endif; ?>
                 <!-- Top bar -->
                 <!--<div class="top-bar"></div>-->
-                <!-- Sidebar toggle button -->
-                <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-                    <i class="material-icons">clear_all</i>
-                </button>
                 <!-- Sidebar brand image -->
                 <div class="sidebar-image">
                     <?php if (!empty($this->options->avatarURL)): ?>
