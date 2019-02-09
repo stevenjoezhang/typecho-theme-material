@@ -22,15 +22,11 @@
                         <h1 style="margin-top: 25px!important;">404 - Not Found</h1>
                         <h3 style="padding-bottom: 20px;">The requested resource is not available</h3>
                     </div>
-
                 </div>
-
             </div>
-
     </main>
     <div class="mdl-layout__obfuscator"></div>
 </div>
-
 
 <!--Analysis code-->
 <?php $this->options->analysis(); ?>
@@ -64,7 +60,6 @@
         }, <?php $this->options->loadingbuffer(); ?>);
     </script>
 <?php endif; ?>
-
 
 <?php $this->footer(); ?>
 

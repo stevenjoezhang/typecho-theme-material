@@ -120,6 +120,5 @@ $this->need('header.php'); ?>
             <?php endif; ?>
         </div>
 
-
         <?php include('sidebar.php'); ?>
         <?php include('footer.php'); ?>

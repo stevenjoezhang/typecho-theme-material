@@ -12,7 +12,7 @@
             <div class="sidebar-header header-cover" style="background-image: url(<?php getThemeFile('img/sidebarheader.jpg', true); ?>);">
                 <?php endif; ?>
                 <!-- Top bar -->
-                <!--<div class="top-bar"></div>-->
+                <div class="top-bar"></div>
                 <!-- Sidebar brand image -->
                 <div class="sidebar-image">
                     <?php if (!empty($this->options->avatarURL)): ?>
@@ -32,12 +32,10 @@
                     <b class="caret"></b>
                 </a>
             </div>
-            <!-- Top bar -->
-            <!--<div class="top-bar"></div>-->
 
-            <!-- Sidebar Navigation  -->
+            <!-- Sidebar Navigation -->
             <ul class="nav sidebar-nav">
-                <!-- User dropdown  -->
+                <!-- User dropdown -->
                 <li class="dropdown">
                     <ul id="settings-dropdown" class="dropdown-menu">
                         <?php if ($this->user->hasLogin()): ?>
@@ -78,7 +76,7 @@
                     </a>
                 </li>
 
-                <!-- Archives  -->
+                <!-- Archives -->
                 <li class="dropdown">
                     <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
                         <i class="material-icons sidebar-material-icons">inbox</i>
@@ -98,7 +96,7 @@
                     </ul>
                 </li>
 
-                <!-- categories -->
+                <!-- Categories -->
                 <li class="dropdown">
                     <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
                         <i class="material-icons sidebar-material-icons">apps</i>
@@ -117,7 +115,7 @@
                     </ul>
                 </li>
 
-                <!-- divider -->
+                <!-- Divider -->
                 <li class="divider"></li>
                 <!-- Pages  -->
                 <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
@@ -135,7 +133,7 @@
                 Typecho_Widget::widget('Widget_Stat')->to($stat);
                 ?>
 
-                <!-- Article Numebr  -->
+                <!-- Article Number -->
                 <li>
                     <a href="#">
                         <?php lang("sidebar.article_num") ?>
@@ -157,7 +155,7 @@
 
             <?php if (!empty($this->options->switch) && in_array('ShowPixiv', $this->options->switch)) : ?>
             <div>
-                <iframe src="https://cloud.mokeyjay.com/pixiv/" frameborder="0"  style="width: 240px; height: 380px; margin: 0 auto; text-align: center"></iframe>
+                <iframe src="https://cloud.mokeyjay.com/pixiv/" frameborder="0" style="width: 240px; height: 380px; margin: 0 auto; text-align: center;"></iframe>
             </div>
             <?php endif; ?>
 

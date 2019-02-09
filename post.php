@@ -55,10 +55,10 @@
                             <img src="<?php getQRCode($this->permalink); ?>" height="200" width="200">
                         </ul>
                         <?php endif; ?>
-                        <!-- view tags -->
+                        <!-- View tags -->
                         <?php if (count($this->tags)): ?>
                         <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-                            <!-- For modern browsers. -->
+                            <!-- For modern browsers -->
                             <i class="material-icons" role="presentation">bookmarks</i>
                             <span class="visuallyhidden">tags</span>
                         </button>
@@ -67,7 +67,7 @@
                                 <?php $this->tags('<li class="mdl-menu__item" style="text-decoration: none;"> ', true, ''); ?></li>
                         </ul>
                         <?php endif; ?>
-                        <!-- share -->
+                        <!-- Share -->
                         <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
                             <i class="material-icons" role="presentation">share</i>
                             <span class="visuallyhidden">share</span>
@@ -106,7 +106,7 @@
                         </ul>
                     </div>
 
-                    <!-- Articel content -->
+                    <!-- Article content -->
                     <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
                         <?php
                         if (!empty($this->options->switch) && in_array('PanguPHP', $this->options->switch)) {

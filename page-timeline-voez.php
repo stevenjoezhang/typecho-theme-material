@@ -13,7 +13,7 @@ $this->need('header.php'); ?>
         max-width: 46em;
         padding: 0;
     }
-    @media screen and (max-device-width:480px){
+    @media screen and (max-device-width:480px) {
         .md-timeline{
             margin-top: 6em;
         }

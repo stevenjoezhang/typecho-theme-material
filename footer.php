@@ -5,8 +5,7 @@
     </a>
 </div>
 
-
-<!--Footer-->
+<!-- Footer -->
 <footer class="mdl-mini-footer" id="bottom">
     <!--mdl-mini-footer-left-section-->
     <div class="mdl-mini-footer--left-section">
@@ -108,14 +107,13 @@
 
     </div>
 
-    <!--copyright-->
+    <!-- Copyright -->
     <div id="copyright">Copyright &copy;
         <?php echo date("Y"); ?>
         <?php $this->options->title(); ?>
         <?php if (!empty($this->options->footer_text)) echo "<br>" . $this->options->footer_text; ?>
     </div>
     <?php copyright() ?>
-
 
     <!--mdl-mini-footer-right-section-->
     <div class="mdl-mini-footer--right-section">
@@ -128,7 +126,6 @@
 </main>
 <div class="mdl-layout__obfuscator"></div>
 </div>
-
 
 <!-- UC Browser Compatible -->
 <script>

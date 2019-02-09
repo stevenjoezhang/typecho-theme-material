@@ -250,11 +250,8 @@ $this->need('header.php'); ?>
                                         <!-- Comment Count -->
                                         <?php $this->commentsNum('%d 评论'); ?>
                                     </a>
-
                                 </div>
-
                             </div>
-
                         </div>
 
                     <?php endwhile; ?>
@@ -269,7 +266,6 @@ $this->need('header.php'); ?>
                             <p class="article-headline-p"><a href="<?php $this->options->siteUrl() ?>"
                                                              target="_self"><?php $this->options->title() ?></a></p>
                         </div>
-
 
                         <!-- Article content -->
                         <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">

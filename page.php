@@ -4,7 +4,7 @@
 
     <main class="material-layout__content" id="main">
         <div id="top"></div>
-        <!-- Hamburger button -->
+        <!-- Hamburger Button -->
         <button class="MD-burger-icon sidebar-toggle">
             <span id="MD-burger-id" class="MD-burger-layer"></span>
         </button>
@@ -63,7 +63,7 @@
                             <span class="visuallyhidden">tags</span>
                         </button>
                         <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
-                            <li class="mdl-menu__item" >
+                            <li class="mdl-menu__item">
                                 <?php $this->tags('</li><li class="mdl-menu__item" style="text-decoration: none;"> ', true, ''); ?></li>
                         </ul>
                         <?php endif; ?>

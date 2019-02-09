@@ -457,7 +457,7 @@ a {
 }
 @media screen and (min-width: 481px) and (max-width: 840px) {
     #scheme-Paradox .index-top-block {
-        min-height: 200px!important;
+        min-height: 200px !important;
         transition: 1s;
         margin-bottom: 47.59px
     }
@@ -819,7 +819,7 @@ a {
     background-size: 50%
 }
 #scheme-Paradox .mdl-grid {
-    display: flex!important
+    display: flex !important
 }
 #scheme-Paradox .social-btn {
     margin: 0 1pc;
@@ -906,7 +906,7 @@ a {
 }
 #scheme-Paradox .footer-develop-a:hover {
     color: #0097a7;
-    text-decoration: underline!important
+    text-decoration: underline !important
 }
 #scheme-Paradox #post_entry-info {
     border-top: 1px solid rgba(0, 0, 0, .1)
@@ -991,7 +991,7 @@ a {
     outline-style: none
 }
 #scheme-Paradox .material-nav {
-    font-weight: 300!important
+    font-weight: 300 !important
 }
 #scheme-Paradox .material-nav a {
     font-weight: 400
@@ -1002,11 +1002,11 @@ a {
     color: #8A8A8A
 }
 #scheme-Paradox .login-input-info {
-    font-size: 14px!important
+    font-size: 14px !important
 }
 #scheme-Paradox .comment__text {
-    font-weight: 400!important;
-    font-size: 13px!important;
+    font-weight: 400 !important;
+    font-size: 13px !important;
     padding-left: 64px
 }
 #scheme-Paradox .comment__text p {
@@ -1016,7 +1016,7 @@ a {
     max-width: 100%
 }
 #scheme-Paradox .comments__closed {
-    color: #8A8A8A!important
+    color: #8A8A8A !important
 }
 #scheme-Paradox .comment-list {
     margin-bottom: 0;
@@ -1024,7 +1024,7 @@ a {
 }
 #scheme-Paradox .comment__author {
     font-size: 13px;
-    font-weight: 400!important
+    font-weight: 400 !important
 }
 #scheme-Paradox #comment__avatar {
     float: left
@@ -1345,7 +1345,8 @@ a {
     outline: 0;
     text-decoration: none
 }
-.sidebar .sidebar-brand .caret {
+.sidebar .sidebar-brand .caret,
+.sidebar .sidebar-text .caret {
     position: absolute;
     right: 24px;
     top: 24px
@@ -1406,11 +1407,6 @@ a {
     box-shadow: none;
     outline: 0
 }
-.sidebar .sidebar-text .caret {
-    position: absolute;
-    right: 24px;
-    top: 24px
-}
 .sidebar .sidebar-text .sidebar-badge,
 .sidebar .hot_tags-count,
 .sidebar .sidebar_archives-count {
@@ -1459,7 +1455,7 @@ a {
     transition: .3s;
 }
 .sidebar .sidebar-nav li.open a .caret {
-  transform:rotate(-180deg);
+    transform: rotate(-180deg);
 }
 .sidebar .sidebar-nav li a .sidebar-badge,
 .hot_tags-count,
@@ -1902,7 +1898,7 @@ a {
 
 @keyframes status-active {
     from {
-        transform: rotate(0)
+        transform: rotate(0deg)
     }
     to {
         transform: rotate(135deg)
@@ -1913,7 +1909,7 @@ a {
         transform: rotate(135deg)
     }
     to {
-        transform: rotate(0)
+        transform: rotate(0deg)
     }
 }
 @keyframes zoomIn {
@@ -2011,7 +2007,7 @@ a {
 /*****************/
 /* Nprogress_CSS */
 /*****************/
- #nprogress {
+#nprogress {
     pointer-events: none
 }
 #nprogress .bar {
@@ -2067,7 +2063,7 @@ a {
 }
 @-webkit-keyframes nprogress-spinner {
     0% {
-        -webkit-transform: rotate(0)
+        -webkit-transform: rotate(0deg)
     }
     100% {
         -webkit-transform: rotate(360deg)
@@ -2075,7 +2071,7 @@ a {
 }
 @keyframes nprogress-spinner {
     0% {
-        transform: rotate(0)
+        transform: rotate(0deg)
     }
     100% {
         transform: rotate(360deg)
