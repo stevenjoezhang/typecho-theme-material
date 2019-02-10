@@ -55,8 +55,7 @@ if (isset($_GET["mod"]) && isset($this) && $this->is('index')) {
  * @param string name
  * @param string uri
  */
-function jsLsload($name, $uri)
-{
+function jsLsload($name, $uri) {
     if (in_array("LocalStorage", getThemeOptions("switch"))) {
         $options = Helper::options();
         $identifier = $name . $uri . filemtime($options->themeFile(getTheme(), $uri)) . MATERIAL_VERSION;
@@ -72,8 +71,7 @@ function jsLsload($name, $uri)
  * @param string name
  * @param string uri
  */
-function cssLsload($name, $uri)
-{
+function cssLsload($name, $uri) {
     if (in_array("LocalStorage", getThemeOptions("switch"))) {
         $options = Helper::options();
         $identifier = $name . $uri . filemtime($options->themeFile(getTheme(), $uri)) . MATERIAL_VERSION;
@@ -81,12 +79,11 @@ function cssLsload($name, $uri)
         echo '<style id="' . $name . '"></style>';
         echo '<script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("' . $name . '","' . getThemeFile($uri) . '?' . $hash . '",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>';
     } else {
-        echo '<link href="'.getThemeFile($uri).'" rel="stylesheet" type="text/css" />';
+        echo '<link rel="stylesheet" href="'.getThemeFile($uri).'"/>';
     }
 }
 
-function getScriptType()
-{
+function getScriptType() {
     if (in_array("LocalStorage", getThemeOptions("switch"))) {
         echo 'text/ls-javascript';
     } else {
@@ -94,8 +91,7 @@ function getScriptType()
     }
 }
 
-function getBackgroundLazyload($url)
-{
+function getBackgroundLazyload($url) {
     if (in_array("LazyloadIndex", getThemeOptions("switch"))) {
         echo 'data-original="' . $url . '"';
     } else {
@@ -103,8 +99,7 @@ function getBackgroundLazyload($url)
     }
 }
 
-function getThemeFile($uri, $print = false)
-{
+function getThemeFile($uri, $print = false) {
     $options = Helper::options();
     if (getThemeOptions("CDNType") == 1) {
         $url = "https://cdn.jsdelivr.net/gh/idawnlight/typecho-theme-material@" . MATERIAL_VERSION . "/" . $uri;
@@ -122,8 +117,7 @@ function getThemeFile($uri, $print = false)
  * 获取当前使用的主题名称
  * @return string theme name
  */
-function getTheme()
-{
+function getTheme() {
     static $themeName = NULL;
     if ($themeName === NULL) {
         $db = Typecho_Db::get();
@@ -139,8 +133,7 @@ function getTheme()
  * @param string setting name
  * @return mixed setting value
  */
-function getThemeOptions($setting = NULL, $print = false)
-{
+function getThemeOptions($setting = NULL, $print = false) {
     static $themeOptions = NULL;
     if ($themeOptions === NULL) {
         $db = Typecho_Db::get();
@@ -152,8 +145,7 @@ function getThemeOptions($setting = NULL, $print = false)
     return ($setting === NULL) ? $themeOptions : (isset($themeOptions[$setting]) ? $themeOptions[$setting] : NULL);
 }
 
-function themeInit($archive)
-{
+function themeInit($archive) {
     if (($archive->is('post') || $archive->is('page')) && in_array("Lazyload", getThemeOptions("switch"))) {
         $archive->content = preg_replace('#<img(.*?) src="(.*?)" (.*?)>#',
             '<img$1 data-original="$2" class="lazy" $3>', $archive->content);
@@ -198,8 +190,7 @@ function getQRCode($permalink) {
  * @param Typecho_Widget $widget
  * @return string image url
  */
-function showThumbnail($widget)
-{
+function showThumbnail($widget) {
     if ($widget->fields->picUrl){
         return $widget->fields->picUrl;
     }
@@ -232,8 +223,7 @@ function showThumbnail($widget)
  * @param Typecho_Widget $widget
  * @return string image url
  */
-function randomThumbnail($widget)
-{
+function randomThumbnail($widget) {
     //If article no include picture, display random default picture
     $rand = rand(1, $widget->widget('Widget_Options')->RandomPicAmnt); //Random number
 
@@ -245,8 +235,7 @@ function randomThumbnail($widget)
 /**
  * Console Copyright
  */
-function copyright()
-{
+function copyright() {
     echo '<script>console.log("\n %c © Material ' . MATERIAL_VERSION . ' | https://github.com/idawnlight/typecho-theme-material %c \n","color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;","color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;")</script>';
 }
 
@@ -257,8 +246,7 @@ function copyright()
  * @param int languageIs 语言设置
  * @return string 对应翻译
  */
-function tranMsg($eng, $chs, $l)
-{
+function tranMsg($eng, $chs, $l) {
     return ($l == "0") ? $eng : $chs ;
 }
 
@@ -267,8 +255,7 @@ function tranMsg($eng, $chs, $l)
  * @param string expression
  * @return string translation
  */
-function lang($expression, $display = true)
-{
+function lang($expression, $display = true) {
     static $lang = NULL;
     $language = (getThemeOptions("language") !== NULL) ? getThemeOptions("language") : "zh-CN";
     if ($lang === NULL) $lang = Spyc::YAMLLoad(Helper::options()->themeFile(getTheme(), "languages/".$language.".yml"));
@@ -291,8 +278,7 @@ function lang($expression, $display = true)
  * @param string html_source
  * @return string 处理完的 html_source
  */
-function pangu($html_source)
-{
+function pangu($html_source) {
     $chunks = preg_split('/(<!--<nopangu>-->.*?<!--<\/nopangu>-->|<nopangu>.*?<\/nopangu>|<pre.*?\/pre>|<textarea.*?\/textarea>|<code.*?\/code>)/msi', $html_source, -1, PREG_SPLIT_DELIM_CAPTURE);
     $result = '';
     foreach ($chunks as $c) {

@@ -39,7 +39,7 @@
 <?php if (!empty($this->options->switch) && in_array('ShowLoadingLine', $this->options->switch)): ?>
     <script src="<?php getThemeFile('js/nprogress.js', true); ?>"></script>
 
-    <script type="text/javascript">
+    <script>
         NProgress.configure({
             showSpinner: true
         });

@@ -1,7 +1,7 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html style="display: none">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8"/>
     <script>
         window.materialVersion = "<?php echo MATERIAL_VERSION; ?>"
     </script>
@@ -13,7 +13,7 @@
     </title>
 
     <!-- dns prefetch -->
-    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <meta http-equiv="x-dns-prefetch-control" content="on"/>
     <?php
     if (getThemeOptions("DNSPrefetch") !== "") {
         foreach (explode("\n", $this->options->DNSPrefetch) as $domain) {
@@ -26,48 +26,48 @@
     ?>
 
     <!-- Meta & Info -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="theme-color" content="<?php $this->options->ChromeThemeColor() ?>">
-    <meta name="author" content="<?php $this->options->title() ?>">
-    <meta name="description" itemprop="description" content="<?php (getDescription()) ? NULL : $this->options->description(); ?>">
-    <meta name="keywords" content="<?php $this->options->keywords() ?><?php ($this->is('post') && count($this->tags) > 0 && print ",") ? $this->tags(",", false, "none") : NULL; ?>">    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <meta name="theme-color" content="<?php $this->options->ChromeThemeColor() ?>"/>
+    <meta name="author" content="<?php $this->options->title() ?>"/>
+    <meta name="description" itemprop="description" content="<?php (getDescription()) ? NULL : $this->options->description(); ?>"/>
+    <meta name="keywords" content="<?php $this->options->keywords() ?><?php ($this->is('post') && count($this->tags) > 0 && print ",") ? $this->tags(",", false, "none") : NULL; ?>"/>    
     
     <!-- Favicons -->
-    <link rel="icon shortcut" type="image/ico" href="<?php $this->options->favicon() ?>">
-    <link rel="icon" sizes="192x192" href="<?php $this->options->favicon() ?>">
-    <link rel="apple-touch-icon" href="<?php $this->options->favicon() ?>">
+    <link rel="icon shortcut" type="image/ico" href="<?php $this->options->favicon() ?>"/>
+    <link rel="icon" sizes="192x192" href="<?php $this->options->favicon() ?>"/>
+    <link rel="apple-touch-icon" href="<?php $this->options->favicon() ?>"/>
 
     <!--iOS -->
-    <meta name="apple-mobile-web-app-title" content="Title">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="480">
+    <meta name="apple-mobile-web-app-title" content="Title"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="HandheldFriendly" content="True"/>
+    <meta name="MobileOptimized" content="480"/>
 
     <!-- Add to homescreen for Chrome on Android -->
-    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes"/>
 
     <!-- Tile icon for Win8 (144x144 + tile color) -->
-    <meta name="msapplication-TileImage" content="<?php $this->options->favicon() ?>" />
-    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="<?php $this->options->favicon() ?>"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF"/>
 
     <!-- The Open Graph protocol -->
     <?php if($this->is('post')||$this->is('page')): ?>
-        <meta property="og:url" content="<?php $this->permalink(); ?>" />
-        <meta property="og:type" content="blog" />
-        <meta property="og:release_date" content="<?php $this->date('Y-m-j'); ?>" />
-        <meta property="og:title" content="<?php $this->options->title(); ?>" />
-        <meta property="og:image" content="<?php echo showThumbnail($this); ?>" />
-        <meta property="og:description" content="<?php (getDescription()) ? NULL : $this->options->description(); ?>" />
-        <meta property="og:author" content="<?php $this->author(); ?>" />
-        <meta property="article:published_time" content="<?php $this->date('Y-m-j'); ?>" />
-        <meta property="article:modified_time" content="<?php $this->date('Y-m-j'); ?>" />
+        <meta property="og:url" content="<?php $this->permalink(); ?>"/>
+        <meta property="og:type" content="blog"/>
+        <meta property="og:release_date" content="<?php $this->date('Y-m-j'); ?>"/>
+        <meta property="og:title" content="<?php $this->options->title(); ?>"/>
+        <meta property="og:image" content="<?php echo showThumbnail($this); ?>"/>
+        <meta property="og:description" content="<?php (getDescription()) ? NULL : $this->options->description(); ?>"/>
+        <meta property="og:author" content="<?php $this->author(); ?>"/>
+        <meta property="article:published_time" content="<?php $this->date('Y-m-j'); ?>"/>
+        <meta property="article:modified_time" content="<?php $this->date('Y-m-j'); ?>"/>
     <?php endif; ?>
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
-    <meta http-equiv="Cache-Control" content="no-transform" />
-    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
 
     <!-- Block IE -->
     <!--[if lte IE 9]>
@@ -81,11 +81,11 @@
 
     <!-- The Twitter Card protocol -->
     <?php if ($this->is("post") || $this->is("page")): ?>
-    <meta name="twitter:title" content="<?php $this->archiveTitle(); ?>">
-    <meta name="twitter:description" content="<?php (getDescription()) ? NULL : $this->options->description(); ?>">
-    <meta name="twitter:image" content="<?php $this->options->favicon() ?>">
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="<?php $this->permalink(); ?>" />
+    <meta name="twitter:title" content="<?php $this->archiveTitle(); ?>"/>
+    <meta name="twitter:description" content="<?php (getDescription()) ? NULL : $this->options->description(); ?>"/>
+    <meta name="twitter:image" content="<?php $this->options->favicon() ?>"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:url" content="<?php $this->permalink(); ?>"/>
     <?php endif; ?>
 
     <?php $this->header(); ?>
@@ -107,11 +107,11 @@
     <?php endif; ?>
 
     <?php if ($this->options->RobotoSource == '0'): ?>
-        <link href='https://fonts.proxy.ustclug.org/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://fonts.proxy.ustclug.org/css?family=Roboto:300,400,500,700"/>
     <?php elseif ($this->options->RobotoSource == '1'): ?>
-        <link href='https://fonts.loli.net/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://fonts.loli.net/css?family=Roboto:300,400,500,700"/>
     <?php elseif ($this->options->RobotoSource == '2'): ?>
-        <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"/>
     <?php endif; ?>
 
     <!-- Config CSS -->
@@ -194,9 +194,7 @@
         }
         <?php endif; ?>
 
-
     </style>
-
 
     <!-- Theme Background Related-->
     <?php if ($this->options->BGtype =='0') : ?>
@@ -380,7 +378,6 @@
         </style>
     <?php endif; ?>
 
-    
     <!-- Canonical link -->
     <?php
     if ($this->is("post") || $this->is("page") || $this->is("index")) {

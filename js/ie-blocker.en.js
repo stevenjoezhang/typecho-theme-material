@@ -10,7 +10,7 @@
     html += "    <div class=\"ib-header\">";
     html += "        <h1>You are using an outdated browser.<\/h1>";
     html += "        <p>To display the website correctly and protect your information,";
-    html += "            <br><strong>please use one of these up-to-date, free and excellent browsers.<\/strong>";
+    html += "            <br/><strong>please use one of these up-to-date, free and excellent browsers.<\/strong>";
     html += "        <\/p>";
     html += "    <\/div>";
     html += "    <ul class=\"ib-browsers\">";

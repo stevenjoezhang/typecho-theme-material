@@ -40,7 +40,7 @@ class Render {
 
     public function radio($name, $display = NULL, $description = NULL, $options, $default = NULL) {
         $string = "";
-        $string .= ($description !== NULL) ? $description . "<br>" : NULL;
+        $string .= ($description !== NULL) ? $description . "<br/>" : NULL;
         $userOption = getThemeOptions($name);
         if ($userOption === NULL) {
             $userOption = $default;
@@ -63,7 +63,7 @@ class Render {
         $userOption = getThemeOptions($name);
         $floatingLabel = ($userOption == "") ? " mdui-textfield-floating-label" : NULL;
         $string .= '<div class="mdui-textfield"><label class="mdui-textfield-label">' . $display .'</label><input class="mdui-textfield-input" type="text" name="' . $name . '" value="' . htmlspecialchars($userOption) . '"/></div>';
-        $string .= ($description !== NULL) ? $description . "<br>" : NULL;
+        $string .= ($description !== NULL) ? $description . "<br/>" : NULL;
         $$name = new Typecho_Widget_Helper_Form_Element_Text($name, null, $default, $display, $description);
         $this->form->addInput($$name);
         return $string;
@@ -74,7 +74,7 @@ class Render {
         $userOption = getThemeOptions($name);
         $floatingLabel = ($userOption == "") ? " mdui-textfield-floating-label" : NULL;
         $string .= '<div class="mdui-textfield"><label class="mdui-textfield-label">' . $display .'</label><textarea class="mdui-textfield-input" type="text" name="' . $name . '"/>' . $userOption . '</textarea></div>';
-        $string .= ($description !== NULL) ? $description . "<br>" : NULL;
+        $string .= ($description !== NULL) ? $description . "<br/>" : NULL;
         $$name = new Typecho_Widget_Helper_Form_Element_Text($name, null, _t($default), _t($display), _t($description));
         $this->form->addInput($$name);
         return $string;

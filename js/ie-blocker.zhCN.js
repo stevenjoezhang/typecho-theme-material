@@ -10,7 +10,7 @@
     html += "    <div class=\"ib-header\">";
     html += "        <h1>您的浏览器需要更新<\/h1>";
     html += "        <p>为了保证页面的正常显示并保护您的个人信息，";
-    html += "            <br><strong>请使用以下新版浏览器<\/strong>";
+    html += "            <br/><strong>请使用以下新版浏览器<\/strong>";
     html += "        <\/p>";
     html += "    <\/div>";
     html += "    <ul class=\"ib-browsers\">";

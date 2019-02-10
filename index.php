@@ -196,7 +196,7 @@ $this->need('header.php'); ?>
                                      style="background-color:<?php $this->options->TitleColor() ?> !important;color:#757575 !important;">
                                     <p class="article-headline-p-nopic">
                                         <a href="<?php $this->permalink() ?>" target="_self">
-                                            "<br><?php $this->title() ?><br>"
+                                            "<br/><?php $this->title() ?><br/>"
                                         </a>
                                     </p>
                                 </div>
