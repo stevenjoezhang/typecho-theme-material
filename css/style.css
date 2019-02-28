@@ -25,9 +25,6 @@ body {
     bottom: 0;
     left: 0;
     z-index: -1;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
     background-attachment: fixed;
     content: '';
@@ -102,7 +99,6 @@ a {
 #post-content p {
     font-size: 15px;
     line-height: 1.7;
-    letter-spacing: .15px !important;
 }
 #post-content>*:first-child {
     margin-top: 0 !important;
@@ -286,7 +282,6 @@ a {
 }
 #post-content img {
     max-width: 100%;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 #post-content span.frame {
@@ -1189,8 +1184,6 @@ a {
 *,
 :after,
 :before {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box
 }
 .sidebar-material-icons {
@@ -1213,20 +1206,12 @@ a {
     opacity: 0;
     background: #000;
     z-index: 9;
-    -webkit-transition: visibility 0 linear .4s, opacity .4s cubic-bezier(.4, 0, .2, 1);
-    -moz-transition: visibility 0 linear .4s, opacity .4s cubic-bezier(.4, 0, .2, 1);
     transition: visibility 0 linear .4s, opacity .4s cubic-bezier(.4, 0, .2, 1);
-    -webkit-transform: translateZ(0);
-    -moz-transform: translateZ(0);
-    -ms-transform: translateZ(0);
-    -o-transform: translateZ(0);
     transform: translateZ(0)
 }
 .sidebar-overlay.active {
     opacity: .5;
     visibility: visible;
-    -webkit-transition-delay: 0;
-    -moz-transition-delay: 0;
     transition-delay: 0
 }
 .top-bar {
@@ -1259,8 +1244,6 @@ a {
     overflow-y: auto;
     overflow-x: hidden;
     border: none;
-    -webkit-transition: all .5s cubic-bezier(.55, 0, .1, 1);
-    -o-transition: all .5s cubic-bezier(.55, 0, .1, 1);
     transition: all .5s cubic-bezier(.55, 0, .1, 1)
 }
 .sidebar:after,
@@ -1292,20 +1275,13 @@ a {
 }
 .sidebar .sidebar-header {
     height: 158.13px;
-    -webkit-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out
-}
-.sidebar .sidebar-header {
     position: relative;
-    -o-transition: all .2s ease-in-out
+    transition: all .2s ease-in-out
 }
 .sidebar .sidebar-header.header-cover {
     background-repeat: no-repeat;
     background-position: center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: 100%
+    background-size: cover
 }
 .sidebar .icon-material-sidebar-arrow:before {
     content: '\e610'
@@ -1316,8 +1292,6 @@ a {
     margin: 16px;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, .2);
-    -webkit-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out
 }
 .sidebar .sidebar-brand {
@@ -1331,16 +1305,12 @@ a {
     padding: 0 56px 0 16px;
     clear: both;
     overflow: hidden;
-    -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
     white-space: nowrap;
-    -webkit-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out
 }
 .sidebar .sidebar-brand:focus,
 .sidebar .sidebar-brand:hover {
-    -webkit-box-shadow: none;
     box-shadow: none;
     outline: 0;
     text-decoration: none
@@ -1396,14 +1366,11 @@ a {
     line-height: 48px;
     text-decoration: none;
     clear: both;
-    -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
-    -webkit-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out
+    transition: all .2s ease-in-out;
 }
 .sidebar .sidebar-text:focus,
 .sidebar .sidebar-text:hover {
-    -webkit-box-shadow: none;
     box-shadow: none;
     outline: 0
 }
@@ -1444,7 +1411,6 @@ a {
 }
 .sidebar .sidebar-nav li a:focus,
 .sidebar .sidebar-nav li a:hover {
-    -webkit-box-shadow: none;
     box-shadow: none;
     outline: 0
 }
@@ -1474,8 +1440,7 @@ a {
     padding: 0;
     border: none;
     border-radius: 0;
-    -webkit-box-shadow: none;
-    box-shadow: none
+    box-shadow: none;
 }
 .sidebar-colored {
     background-color: #fff
@@ -1568,13 +1533,11 @@ a {
 }
 .sidebar {
     width: 0;
-    -webkit-transform: translate3d(-280px, 0, 0);
     transform: translate3d(-280px, 0, 0)
 }
 .sidebar.open {
     min-width: 280px;
     width: 280px;
-    -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0)
 }
 .sidebar-fixed-left {
@@ -1584,7 +1547,6 @@ a {
     z-index: 10;
     left: 0;
     box-shadow: 2px 0 15px rgba(0, 0, 0, .35);
-    -webkit-box-shadow: 2px 0 15px rgba(0, 0, 0, .35)
 }
 @media (max-width: 840px) {
     .sidebar.open {
@@ -1627,7 +1589,6 @@ a {
     width: 20px;
     background: #eee;
     position: relative;
-    -webkit-animation-duration: 300ms;
     animation-duration: 300ms;
     animation-timing-function: ease-in-out
 }
@@ -1636,7 +1597,7 @@ a {
 .MD-burger-layer:before {
     display: block;
     height: 2px;
-    -webkit-animation-timing-function: ease-in-out
+    animation-timing-function: ease-in-out
 }
 .MD-burger-layer:after,
 .MD-burger-layer:before {
@@ -1645,7 +1606,6 @@ a {
     background: inherit;
     left: 0;
     content: '';
-    -webkit-animation-duration: 300ms;
     animation-duration: 300ms;
     animation-timing-function: ease-in-out
 }
@@ -1656,118 +1616,59 @@ a {
     top: 5px
 }
 .MD-burger-arrow {
-    -webkit-animation-name: MD-burger-icon-arrow;
     animation-name: MD-burger-icon-arrow;
-    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards
 }
 .MD-burger-arrow:before {
-    -webkit-animation-name: MD-burger-icon-before-arrow;
     animation-name: MD-burger-icon-before-arrow;
-    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards
 }
 .MD-burger-arrow:after {
-    -webkit-animation-name: MD-burger-icon-after-arrow;
     animation-name: MD-burger-icon-after-arrow;
-    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards
 }
 .MD-burger-line {
-    -webkit-animation-name: MD-burger-icon-line;
     animation-name: MD-burger-icon-line
 }
 .MD-burger-line:before {
-    -webkit-animation-name: MD-burger-icon-before-line;
     animation-name: MD-burger-icon-before-line
 }
 .MD-burger-line:after {
-    -webkit-animation-name: MD-burger-icon-after-line;
     animation-name: MD-burger-icon-after-line
-}
-@-webkit-keyframes MD-burger-icon-arrow {
-    100% {
-        -webkit-transform: rotate(180deg);
-        transform: rotate(180deg)
-    }
 }
 @keyframes MD-burger-icon-arrow {
     100% {
-        -webkit-transform: rotate(180deg);
         transform: rotate(180deg)
-    }
-}
-@-webkit-keyframes MD-burger-icon-before-arrow {
-    100% {
-        -webkit-transform: rotate(45deg);
-        transform: rotate(45deg);
-        margin: 3% 37%;
-        width: 75%
     }
 }
 @keyframes MD-burger-icon-before-arrow {
     100% {
-        -webkit-transform: rotate(45deg);
         transform: rotate(45deg);
-        margin: 3% 37%;
-        width: 75%
-    }
-}
-@-webkit-keyframes MD-burger-icon-after-arrow {
-    100% {
-        -webkit-transform: rotate(-45deg);
-        transform: rotate(-45deg);
         margin: 3% 37%;
         width: 75%
     }
 }
 @keyframes MD-burger-icon-after-arrow {
     100% {
-        -webkit-transform: rotate(-45deg);
         transform: rotate(-45deg);
         margin: 3% 37%;
         width: 75%
-    }
-}
-@-webkit-keyframes MD-burger-icon-line {
-    0% {
-        -webkit-transform: rotate(-180deg);
-        transform: rotate(-180deg)
     }
 }
 @keyframes MD-burger-icon-line {
     0% {
-        -webkit-transform: rotate(-180deg);
         transform: rotate(-180deg)
-    }
-}
-@-webkit-keyframes MD-burger-icon-before-line {
-    0% {
-        -webkit-transform: rotate(45deg);
-        transform: rotate(45deg);
-        margin: 3% 37%;
-        width: 75%
     }
 }
 @keyframes MD-burger-icon-before-line {
     0% {
-        -webkit-transform: rotate(45deg);
         transform: rotate(45deg);
-        margin: 3% 37%;
-        width: 75%
-    }
-}
-@-webkit-keyframes MD-burger-icon-after-line {
-    0% {
-        -webkit-transform: rotate(-45deg);
-        transform: rotate(-45deg);
         margin: 3% 37%;
         width: 75%
     }
 }
 @keyframes MD-burger-icon-after-line {
     0% {
-        -webkit-transform: rotate(-45deg);
         transform: rotate(-45deg);
         margin: 3% 37%;
         width: 75%
@@ -1794,7 +1695,7 @@ a {
 }
 .post-toc .post-toc-item {
     /*
-  display: block;
+    display: block;
     border: 0;
     color: rgba(0,0,0,.87);
     margin: 0;
@@ -1810,7 +1711,6 @@ a {
     height: 48px;
     line-height: 48px;
     white-space: nowrap;
-    -webkit-transition: opacity .2s cubic-bezier(.4,0,.2,1);
     transition: opacity .2s cubic-bezier(.4,0,.2,1);
     user-select: none;
 */
@@ -1876,9 +1776,6 @@ a {
     background: #00BCD4;
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, .12), 0 3px 3px 0 rgba(0, 0, 0, .24);
     cursor: pointer;
-    -webkit-transition: all .1s ease-out;
-    -moz-transition: all .1s ease-out;
-    -o-transition: all .1s ease-out;
     transition: all .1s ease-out;
     position: relative;
     overflow: hidden
@@ -1914,39 +1811,24 @@ a {
 }
 @keyframes zoomIn {
     0% {
-        -moz-transform: scale(0);
-        -ms-transform: scale(0);
-        -webkit-transform: scale(0);
         transform: scale(0);
         opacity: 0
     }
     100% {
-        -moz-transform: scale(1);
-        -ms-transform: scale(1);
-        -webkit-transform: scale(1);
         transform: scale(1);
         opacity: 1
     }
 }
 @keyframes load {
     0% {
-        -moz-transform: scale(0);
-        -ms-transform: scale(0);
-        -webkit-transform: scale(0);
         transform: scale(0);
         opacity: 0
     }
     50% {
-        -moz-transform: scale(1.5);
-        -ms-transform: scale(1.5);
-        -webkit-transform: scale(1.5);
         transform: scale(1.5);
         opacity: 1
     }
     100% {
-        -moz-transform: scale(1);
-        -ms-transform: scale(1);
-        -webkit-transform: scale(1);
         transform: scale(1);
         opacity: 0
     }
@@ -1985,9 +1867,6 @@ a {
     position: absolute;
     background: rgba(38, 50, 56, .4);
     border-radius: 100%;
-    -moz-transform: scale(0);
-    -ms-transform: scale(0);
-    webkit-transform: scale(0);
     transform: scale(0)
 }
 .ink.animate {
@@ -1996,9 +1875,6 @@ a {
 @keyframes ripple {
     100% {
         opacity: 0;
-        -moz-transform: scale(5);
-        -ms-transform: scale(5);
-        webkit-transform: scale(5);
         transform: scale(5)
     }
 }
@@ -2027,8 +1903,6 @@ a {
     height: 100%;
     box-shadow: 0 0 10px #29d, 0 0 5px #29d;
     opacity: 1;
-    -webkit-transform: rotate(3deg) translate(0, -4px);
-    -ms-transform: rotate(3deg) translate(0, -4px);
     transform: rotate(3deg) translate(0, -4px)
 }
 #nprogress .spinner {
@@ -2050,7 +1924,6 @@ a {
     border-top-color: #29d;
     border-left-color: #29d;
     border-radius: 50%;
-    -webkit-animation: nprogress-spinner 400ms linear infinite;
     animation: nprogress-spinner 400ms linear infinite
 }
 .nprogress-custom-parent {
@@ -2060,14 +1933,6 @@ a {
 .nprogress-custom-parent #nprogress .bar,
 .nprogress-custom-parent #nprogress .spinner {
     position: absolute
-}
-@-webkit-keyframes nprogress-spinner {
-    0% {
-        -webkit-transform: rotate(0deg)
-    }
-    100% {
-        -webkit-transform: rotate(360deg)
-    }
 }
 @keyframes nprogress-spinner {
     0% {

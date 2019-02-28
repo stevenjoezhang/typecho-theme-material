@@ -37,7 +37,7 @@
                             <strong><?php $this->author(); ?></strong>
                             <!-- Articel date -->
                             <span>
-                            <?php if ($this->options->langis == '0'): ?>
+                            <?php if ($this->options->language != 'zh-CN'): ?>
                                 <?php $this->date('F j, Y'); ?>
                             <?php else: ?>
                                 <?php $this->dateWord(); ?>
