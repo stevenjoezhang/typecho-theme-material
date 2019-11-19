@@ -276,7 +276,7 @@
                             }
                             loadFunc()
                         }else{
-                            $('<img />').one('load', function(){ // `on` -> `one` : IE6 triggered twice load event sometimes
+                            $('<img>').one('load', function(){ // `on` -> `one` : IE6 triggered twice load event sometimes
                                 loadFunc()
                                 if(options.load != emptyFn){
                                     options.load.call(element, $element, $elements.length, options)

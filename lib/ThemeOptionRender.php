@@ -40,7 +40,7 @@ class Render {
 
     public function radio($name, $display = NULL, $description = NULL, $options, $default = NULL) {
         $string = "";
-        $string .= ($description !== NULL) ? $description . "<br/>" : NULL;
+        $string .= ($description !== NULL) ? $description . "<br>" : NULL;
         $userOption = getThemeOptions($name);
         if ($userOption === NULL) {
             $userOption = $default;
@@ -49,7 +49,7 @@ class Render {
         foreach ($options as $id => $value) {
             $check = ($id == $userOption) ? "checked" : NULL;
             $string .= '<li><label class="mdui-radio">
-            <input type="radio" name="' . $name . '" value="' . $id . '" ' . $check . '/><i class="mdui-radio-icon"></i>' . $value . '</label></li>';
+            <input type="radio" name="' . $name . '" value="' . $id . '" ' . $check . '><i class="mdui-radio-icon"></i>' . $value . '</label></li>';
             $options[$id] = _t($value);
         }
         $string .= "</ul>";
@@ -62,8 +62,8 @@ class Render {
         $string = "";
         $userOption = getThemeOptions($name);
         $floatingLabel = ($userOption == "") ? " mdui-textfield-floating-label" : NULL;
-        $string .= '<div class="mdui-textfield"><label class="mdui-textfield-label">' . $display .'</label><input class="mdui-textfield-input" type="text" name="' . $name . '" value="' . htmlspecialchars($userOption) . '"/></div>';
-        $string .= ($description !== NULL) ? $description . "<br/>" : NULL;
+        $string .= '<div class="mdui-textfield"><label class="mdui-textfield-label">' . $display .'</label><input class="mdui-textfield-input" type="text" name="' . $name . '" value="' . htmlspecialchars($userOption) . '"></div>';
+        $string .= ($description !== NULL) ? $description . "<br>" : NULL;
         $$name = new Typecho_Widget_Helper_Form_Element_Text($name, null, $default, $display, $description);
         $this->form->addInput($$name);
         return $string;
@@ -73,8 +73,8 @@ class Render {
         $string = "";
         $userOption = getThemeOptions($name);
         $floatingLabel = ($userOption == "") ? " mdui-textfield-floating-label" : NULL;
-        $string .= '<div class="mdui-textfield"><label class="mdui-textfield-label">' . $display .'</label><textarea class="mdui-textfield-input" type="text" name="' . $name . '"/>' . $userOption . '</textarea></div>';
-        $string .= ($description !== NULL) ? $description . "<br/>" : NULL;
+        $string .= '<div class="mdui-textfield"><label class="mdui-textfield-label">' . $display .'</label><textarea class="mdui-textfield-input" type="text" name="' . $name . '">' . $userOption . '</textarea></div>';
+        $string .= ($description !== NULL) ? $description . "<br>" : NULL;
         $$name = new Typecho_Widget_Helper_Form_Element_Text($name, null, _t($default), _t($display), _t($description));
         $this->form->addInput($$name);
         return $string;
@@ -87,7 +87,7 @@ class Render {
         foreach ($options as $option => $value) {
             $checked = "";
             if ($userOptions !== null && in_array($option, $userOptions)) $checked = "checked";
-            $string .= '<li><label class="mdui-checkbox"><input type="checkbox" name="' . $name . '[]" value="' . $option . '" ' . $checked . '/><i class="mdui-checkbox-icon"></i>' . $value . '</label></li>';
+            $string .= '<li><label class="mdui-checkbox"><input type="checkbox" name="' . $name . '[]" value="' . $option . '" ' . $checked . '><i class="mdui-checkbox-icon"></i>' . $value . '</label></li>';
         }
         $string .= "</ul>";
         $$name = new Typecho_Widget_Helper_Form_Element_Checkbox($name, $options, $default, _t($display), _t($description));

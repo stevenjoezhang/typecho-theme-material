@@ -1699,7 +1699,7 @@ window.addEventListener("load", function() {
              d = this.$element.hasClass("fade") ? "fade" : "";
          if (this.isShown && this.options.backdrop) {
              var e = a.support.transition && d;
-             if (this.$backdrop = a('<div class="modal-backdrop ' + d + '" />').appendTo(this.$body), this.$element.on("click.dismiss.bs.modal", a.proxy(function(a) {
+             if (this.$backdrop = a('<div class="modal-backdrop ' + d + '">').appendTo(this.$body), this.$element.on("click.dismiss.bs.modal", a.proxy(function(a) {
                      a.target === a.currentTarget && ("static" == this.options.backdrop ? this.$element[0].focus.call(this.$element[0]) : this.hide.call(this))
                  }, this)), e && this.$backdrop[0].offsetWidth, this.$backdrop.addClass("in"), !b) return;
              e ? this.$backdrop.one("bsTransitionEnd", b).emulateTransitionEnd(150) : b()

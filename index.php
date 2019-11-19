@@ -43,7 +43,7 @@ $this->need('header.php'); ?>
                         <!-- Author avatar -->
                         <div id="author-avatar">
                             <?php if (!empty($this->options->avatarURL)): ?>
-                                <img src="<?php $this->options->avatarURL() ?>" width="32px" height="32px"/>
+                                <img src="<?php $this->options->avatarURL() ?>" width="32px" height="32px">
                             <?php else: ?>
                                 <?php $this->author->gravatar(32); ?>
                             <?php endif; ?>
@@ -67,7 +67,7 @@ $this->need('header.php'); ?>
                             <form autocomplete="off" id="search-form" method="post" action=""
                                   class="mdl-textfield__expandable-holder">
                                 <input type="text" id="search" class="form-control mdl-textfield__input search-input"
-                                       name="s" results="0" placeholder=""/>
+                                       name="s" results="0" placeholder="">
                                 <label id="search-form-label" class="mdl-textfield__label" for="search"></label>
                             </form>
                         </div>
@@ -196,7 +196,7 @@ $this->need('header.php'); ?>
                                      style="background-color:<?php $this->options->TitleColor() ?> !important;color:#757575 !important;">
                                     <p class="article-headline-p-nopic">
                                         <a href="<?php $this->permalink() ?>" target="_self">
-                                            "<br/><?php $this->title() ?><br/>"
+                                            "<br><?php $this->title() ?><br>"
                                         </a>
                                     </p>
                                 </div>
@@ -226,7 +226,7 @@ $this->need('header.php'); ?>
                                     <!-- Author avatar -->
                                     <div id="author-avatar">
                                         <?php if (!empty($this->options->avatarURL)): ?>
-                                            <img src="<?php $this->options->avatarURL() ?>" width="44px" height="44px"/>
+                                            <img src="<?php $this->options->avatarURL() ?>" width="44px" height="44px">
                                         <?php else: ?>
                                             <?php $this->author->gravatar(44); ?>
                                         <?php endif; ?>

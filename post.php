@@ -118,7 +118,7 @@
                         <?php if (!empty($this->options->post_license)): ?>
                             <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
                                 <p>
-                                    <strong><?php lang("post.permalink"); echo "<a href=\"" . $this->permalink . "\">" . $this->permalink . "</a>" ;?></strong><br/>
+                                    <strong><?php lang("post.permalink"); echo "<a href=\"" . $this->permalink . "\">" . $this->permalink . "</a>" ;?></strong><br>
                                     <strong><?php $this->options->post_license(); ?></strong>
                                 </p>
                             </blockquote>

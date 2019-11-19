@@ -407,7 +407,7 @@ $this->need('header.php'); ?>
         <div class="md-timeline-block">
             <div class="md-timeline-date blue">
                 <div class="md-date">
-                    <?php $archive->date('M j'); ?><br />
+                    <?php $archive->date('M j'); ?><br>
                     <?php $archive->date('Y'); ?>
                 </div>
             </div>

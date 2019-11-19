@@ -79,7 +79,7 @@ function cssLsload($name, $uri) {
         echo '<style id="' . $name . '"></style>';
         echo '<script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("' . $name . '","' . getThemeFile($uri) . '?' . $hash . '",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>';
     } else {
-        echo '<link rel="stylesheet" href="'.getThemeFile($uri).'"/>';
+        echo '<link rel="stylesheet" href="'.getThemeFile($uri).'">';
     }
 }
 

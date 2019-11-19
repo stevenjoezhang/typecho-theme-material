@@ -111,7 +111,7 @@
     <div id="copyright">Copyright &copy;
         <?php echo date("Y"); ?>
         <?php $this->options->title(); ?>
-        <?php if (!empty($this->options->footer_text)) echo "<br/>" . $this->options->footer_text; ?>
+        <?php if (!empty($this->options->footer_text)) echo "<br>" . $this->options->footer_text; ?>
     </div>
     <?php copyright() ?>
 

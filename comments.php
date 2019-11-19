@@ -107,7 +107,7 @@
                         <!-- Input name -->
                         <div class="login-form-group">
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input type="text" name="author" class="mdl-textfield__input login-input-info" value="<?php $this->remember('author'); ?>" />
+                                <input type="text" name="author" class="mdl-textfield__input login-input-info" value="<?php $this->remember('author'); ?>">
                                 <label for="author" class="mdl-textfield__label">
                                     <?php if (getThemeOptions("language") === "zh-CN"): ?>
                                     昵称*
@@ -121,7 +121,7 @@
                         <!-- Input email -->
                         <div class="login-form-group">
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input type="email" name="mail" class="mdl-textfield__input login-input-info" value="<?php $this->remember('mail'); ?>" />
+                                <input type="email" name="mail" class="mdl-textfield__input login-input-info" value="<?php $this->remember('mail'); ?>">
                                 <label for="mail" class="mdl-textfield__label">
                                     <?php if (getThemeOptions("language") === "zh-CN"): ?>
                                     邮箱*
@@ -135,7 +135,7 @@
                         <!-- Input website -->
                         <div class="login-form-group">
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input type="url" name="url" id="visitor-url" class="mdl-textfield__input login-input-info" value="<?php $this->remember('url'); ?>" />
+                                <input type="url" name="url" id="visitor-url" class="mdl-textfield__input login-input-info" value="<?php $this->remember('url'); ?>">
                                 <!--  placeholder="http://"-->
                                 <label for="url" class="mdl-textfield__label">
                                     <?php if (getThemeOptions("language") === "zh-CN"): ?>
